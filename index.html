@@ -7,6 +7,14 @@
       name="description"
       content="Portfolio of Danish Zaffar, an automation and systems specialist building AI workflows, dashboards, and business process automation."
     />
+    <link rel="canonical" href="https://byddanish.com/" />
+    <meta property="og:title" content="Danish Zaffar | Automation, Finance & Systems Portfolio" />
+    <meta
+      property="og:description"
+      content="Automation, Excel, Google Workspace, finance operations, dashboards, and business systems portfolio."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://byddanish.com/" />
     <title>Danish Zaffar | Automation, Finance & Systems Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -25,6 +33,11 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-dot"></span>
+        </span>
+      </button>
       <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
         <span></span>
@@ -66,7 +79,7 @@
             <div class="profile-orbit"></div>
             <img
               class="profile-photo"
-              src="./danish-zaffar-portrait.webp"
+              src="danish-zaffar-portrait.webp"
               width="689"
               height="1264"
               alt="Portrait of Danish Zaffar"
@@ -154,8 +167,15 @@
             each one can become a deeper portfolio page.
           </p>
         </div>
+        <div class="project-filters" aria-label="Project filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="finance">Finance</button>
+          <button class="filter-button" type="button" data-filter="automation">Automation</button>
+          <button class="filter-button" type="button" data-filter="reporting">Reporting</button>
+          <button class="filter-button" type="button" data-filter="ai">AI</button>
+        </div>
         <div class="project-grid">
-          <article class="project-card">
+          <article class="project-card" data-category="automation reporting">
             <p class="project-type">Education Automation</p>
             <h3>Adaptive Quiz System for WGU</h3>
             <p>
@@ -168,8 +188,11 @@
               <li>Reporting-ready data model</li>
             </ul>
             <span class="tools">Google Sheets / Google Forms / Apps Script / Automation Logic</span>
+            <button class="project-detail" type="button" data-project="Adaptive Quiz System for WGU">
+              Project Focus
+            </button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="finance automation reporting">
             <p class="project-type">Finance Operations</p>
             <h3>Excel & Google Sheets P&L Automation</h3>
             <p>
@@ -182,8 +205,11 @@
               <li>Cleaner monthly reporting</li>
             </ul>
             <span class="tools">Excel / Pivot Tables / Google Sheets / Apps Script / QuickBooks</span>
+            <button class="project-detail" type="button" data-project="Excel & Google Sheets P&L Automation">
+              Project Focus
+            </button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="automation reporting">
             <p class="project-type">Project Operations</p>
             <h3>Project Tracking Dashboard</h3>
             <p>
@@ -196,8 +222,11 @@
               <li>Operational dashboard layout</li>
             </ul>
             <span class="tools">Power BI / Sheets / Process Design</span>
+            <button class="project-detail" type="button" data-project="Project Tracking Dashboard">
+              Project Focus
+            </button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="automation">
             <p class="project-type">Client Systems</p>
             <h3>Smart Client Management System</h3>
             <p>
@@ -210,8 +239,11 @@
               <li>Searchable operating records</li>
             </ul>
             <span class="tools">CRM Design / Google Forms / Google Sites / Automation</span>
+            <button class="project-detail" type="button" data-project="Smart Client Management System">
+              Project Focus
+            </button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="ai automation">
             <p class="project-type">AI Workflow</p>
             <h3>GHL + n8n AI Workflow</h3>
             <p>
@@ -224,8 +256,11 @@
               <li>Tool-to-tool integration</li>
             </ul>
             <span class="tools">GoHighLevel / n8n / AI Automation</span>
+            <button class="project-detail" type="button" data-project="GHL + n8n AI Workflow">
+              Project Focus
+            </button>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-category="reporting finance">
             <p class="project-type">Reporting Systems</p>
             <h3>Power BI Reporting Systems</h3>
             <p>
@@ -238,6 +273,9 @@
               <li>Basic SQL and data logic</li>
             </ul>
             <span class="tools">Excel / Power BI / Data Modeling / Reporting</span>
+            <button class="project-detail" type="button" data-project="Power BI Reporting Systems">
+              Project Focus
+            </button>
           </article>
         </div>
       </section>
@@ -316,6 +354,26 @@
       <p>Copyright <span id="year"></span> Danish Zaffar. Automation, systems, and workflow design.</p>
       <a href="#top">Back to top</a>
     </footer>
+
+    <div class="project-modal" hidden>
+      <div class="modal-backdrop" data-modal-close></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close project details" data-modal-close>Close</button>
+        <p class="project-type" id="modal-type">Project Focus</p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-summary"></p>
+        <div class="modal-columns">
+          <div>
+            <h3>Business Value</h3>
+            <p id="modal-value"></p>
+          </div>
+          <div>
+            <h3>Tools</h3>
+            <p id="modal-tools"></p>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <script src="script.js"></script>
   </body>
