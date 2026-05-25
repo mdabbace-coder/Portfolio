@@ -1,6 +1,6 @@
 # Danish Zaffar Portfolio
 
-Static portfolio website for `byddanish.com`.
+Static portfolio website for `portfolio.bydanish.com`.
 
 ## GitHub Pages Deployment
 
@@ -9,7 +9,7 @@ Static portfolio website for `byddanish.com`.
 3. In GitHub, open Settings > Pages.
 4. Set the source to the main branch root.
 5. Keep the included `CNAME` file for the custom domain.
-6. In the domain DNS settings, point `byddanish.com` to GitHub Pages.
+6. In the domain DNS settings, point `portfolio.bydanish.com` to GitHub Pages.
 
 ## Local Preview
 
