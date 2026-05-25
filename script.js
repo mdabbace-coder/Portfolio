@@ -57,7 +57,10 @@ const projectDetails = {
   },
 };
 
-const savedTheme = localStorage.getItem("portfolio-theme");
+const themePreferenceKey = "portfolio-theme-v2";
+localStorage.removeItem("portfolio-theme");
+
+const savedTheme = localStorage.getItem(themePreferenceKey);
 if (savedTheme === "light") {
   document.body.removeAttribute("data-theme");
 } else {
@@ -80,10 +83,10 @@ themeToggle?.addEventListener("click", () => {
   const isDark = document.body.dataset.theme === "dark";
   if (isDark) {
     document.body.removeAttribute("data-theme");
-    localStorage.setItem("portfolio-theme", "light");
+    localStorage.setItem(themePreferenceKey, "light");
   } else {
     document.body.dataset.theme = "dark";
-    localStorage.setItem("portfolio-theme", "dark");
+    localStorage.setItem(themePreferenceKey, "dark");
   }
 });
 
