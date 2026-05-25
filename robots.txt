@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio.bydanish.com/sitemap.xml
+Sitemap: https://portfolio.byddanish.com/sitemap.xml
