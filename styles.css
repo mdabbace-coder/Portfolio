@@ -515,7 +515,7 @@ body.loaded .profile-shell::before {
   background: rgba(255, 255, 255, 0.94);
   border-radius: 8px;
   bottom: 28px;
-  color: var(--ink);
+  color: #10201f;
   font-size: 13px;
   font-weight: 850;
   left: 28px;
@@ -642,7 +642,7 @@ body.loaded .status-pill::before {
 }
 
 .skills-band .section-kicker,
-.skills-band p {
+skills-band p {
   color: #9ee0d4;
 }
 
