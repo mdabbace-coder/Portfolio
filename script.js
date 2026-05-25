@@ -58,7 +58,9 @@ const projectDetails = {
 };
 
 const savedTheme = localStorage.getItem("portfolio-theme");
-if (savedTheme === "dark") {
+if (savedTheme === "light") {
+  document.body.removeAttribute("data-theme");
+} else {
   document.body.dataset.theme = "dark";
 }
 
