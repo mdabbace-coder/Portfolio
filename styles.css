@@ -872,7 +872,7 @@ body[data-theme="dark"] .project-detail {
 
 .contact-actions {
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .contact-card {
@@ -883,10 +883,11 @@ body[data-theme="dark"] .project-detail {
   border: 1px solid var(--line);
   border-radius: 8px;
   display: grid;
-  gap: 14px;
-  grid-template-columns: 46px minmax(0, 1fr) auto;
-  min-height: 82px;
-  padding: 16px;
+  gap: 12px;
+  grid-template-columns: 38px minmax(0, 1fr) auto;
+  min-height: 66px;
+  overflow: hidden;
+  padding: 12px 14px;
   transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -904,19 +905,24 @@ body[data-theme="dark"] .project-detail {
   border-radius: 8px;
   color: var(--teal);
   display: inline-flex;
-  height: 46px;
+  flex: 0 0 38px;
+  height: 38px;
   justify-content: center;
-  width: 46px;
+  width: 38px;
 }
 
-.contact-icon svg {
+.contact-card .contact-icon svg {
+  display: block;
   fill: none;
-  height: 24px;
+  flex: 0 0 20px;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
   stroke: currentColor;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 1.9;
-  width: 24px;
+  stroke-width: 1.8;
+  width: 20px;
 }
 
 .contact-card strong,
@@ -925,14 +931,14 @@ body[data-theme="dark"] .project-detail {
 }
 
 .contact-card strong {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .contact-card small {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 750;
 }
 
